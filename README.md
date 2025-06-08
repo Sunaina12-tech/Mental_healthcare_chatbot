@@ -6,3 +6,13 @@ MetalCare’s architecture is divided into four stages. First, the system captur
 Fourth, the system composes a response, merging GPT-4’s language capabilities with the retrieved data; the final output is delivered as text and, if the user prefers, converted back into speech via a text-to-speech engine.
 
 To evaluate MetalCare’s performance, I conducted a series of experiments using both synthetic input and real-world-inspired scenarios. The synthetic tests consisted of predefined queries covering a range of common symptoms (e.g., “What does a persistent cough indicate?”) and medication questions (e.g., “How should I take ibuprofen?”). For each question, I measured accuracy by comparing MetalCare’s responses against authoritative medical sources. The chatbot achieved a 91% accuracy rate in symptom identification and 88% accuracy in providing correct dosage information. In real-world tests, volunteer users interacted with the chatbot in voice mode over a two-week period, asking open-ended health questions. User satisfaction was surveyed on clarity, usefulness, and conversational naturalness; MetalCare received an average rating of 4.3 out of 5. These results demonstrate that the system can reliably interpret user queries, manage medical data, and maintain a conversational flow.
+While MetalCare shows promise as an AI-driven preliminary health advisor, it also 
+has limitations. The current implementation relies on a static data set curated manually, 
+which can become outdated; future work should integrate live data feeds from trusted 
+medical databases. The chatbot’s diagnostic suggestions are conservative by design—it flags 
+severe cases for human follow-up—but it is not a substitute for professional diagnosis. 
+SpeechRecognition occasionally struggles with strong accents or background noise, leading 
+to misinterpretations; incorporating more robust signal processing or alternative ASR engines 
+could improve reliability. Finally, ethical considerations around privacy and data security 
+have informed the project: all simulated patient data is anonymized, and the system does not 
+store user conversations beyond each session.
